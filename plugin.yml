@@ -1,0 +1,28 @@
+name: SMonitor
+version: 0.0.1
+author: solo
+api:
+- 3.0.0-ALPHA7
+- 3.0.0-ALPHA8
+- 3.0.0-ALPHA9
+- 3.0.0-ALPHA10
+- 3.0.0-ALPHA11
+- 3.0.0-ALPHA12
+- 3.0.0-ALPHA13
+- 3.0.0-ALPHA14
+- 3.0.0-ALPHA15
+main: solo\smonitor\SMonitor
+commands:
+  작업관리자:
+    description: 작업관리자를 켭니다
+    permission: smonitor.command.monitor
+
+permissions:
+  smonitor:
+    default: op
+    children:
+      smonitor.command:
+        default: op
+        children:
+          smonitor.command.monitor:
+            default: op
