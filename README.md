@@ -1,10 +1,10 @@
 # SMonitor
 Monitoring your server with beautiful graph
 
-![scrrenshot1](https://imgur.com/zgGOaQE)
+![scrrenshot1](https://i.imgur.com/zgGOaQE.jpg)
 
-![screenshot2](https://imgur.com/aOZtvxH)
+![screenshot2](https://i.imgur.com/aOZtvxH.jpg)
 
-![screenshot3](https://imgur.com/OiMAHHT)
+![screenshot3](https://i.imgur.com/OiMAHHT.jpg)
 
-![screenshot4](https://imgur.com/uqBqLAd)
+![screenshot4](https://i.imgur.com/uqBqLAd.jpg)
