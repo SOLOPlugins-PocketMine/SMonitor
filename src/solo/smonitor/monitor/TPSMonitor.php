@@ -15,7 +15,7 @@ class TPSMonitor extends Monitor{
 	}
 
 	public function update(){
-    	$this->push(Server::getInstance()->getTicksPerSecondAverage());
+    		$this->push(Server::getInstance()->getTicksPerSecondAverage());
 	}
 
 	public function getGraphMaxHeight(){
