@@ -17,8 +17,8 @@ class NetworkMonitor extends Monitor{
 	}
 
 	public function update(){
-    	$this->push(round(Server::getInstance()->getNetwork()->getUpload() / 1024, 2));
-    	$this->latestDownload = round(Server::getInstance()->getNetwork()->getDownload() / 1024, 2);
+    		$this->push(round(Server::getInstance()->getNetwork()->getUpload() / 1024, 2));
+    		$this->latestDownload = round(Server::getInstance()->getNetwork()->getDownload() / 1024, 2);
 	}
 
 	public function createGraph(){
