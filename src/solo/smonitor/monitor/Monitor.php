@@ -45,7 +45,7 @@ abstract class Monitor{
 
 	public function push($value){
 		array_unshift($this->log, $value);
-		if(count($this->log) > $this->graphRow){
+		if(count($this->log) > $this->graphRow + 1){
 			array_pop($this->log);
 		}
 		$this->averageValue = array_sum($this->log) / count($this->log);
@@ -82,7 +82,7 @@ abstract class Monitor{
 
 		$lines = [];
 		for($i = 0; $i < $this->graphColumn; ++$i){
-			$sideMeter = intval($maxHeight / $this->graphColumn) * ($i + 1);
+			$sideMeter = ceil(($maxHeight / $this->graphColumn) * ($i + 1));
 			if(strlen($sideMeter) < strlen($maxHeight)){
 				$sideMeter = '§0' . str_repeat('0', strlen($maxHeight) - strlen($sideMeter)) . $this->getColor() . $sideMeter;
 			}else{
