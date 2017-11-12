@@ -5,7 +5,7 @@ namespace solo\smonitor\monitor;
 abstract class Monitor{
 
 	const DEFAULT_GRAPH_ROW = 128;
-	const DEFAULT_GRAPH_COLUMN = 5;
+	const DEFAULT_GRAPH_COLUMN = 10;
 
 	protected $graphRow = self::DEFAULT_GRAPH_ROW;
 	protected $graphColumn = self::DEFAULT_GRAPH_COLUMN;
