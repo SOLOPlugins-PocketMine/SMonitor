@@ -15,7 +15,7 @@ class LoadMonitor extends Monitor{
 	}
 
 	public function update(){
-    		$this->push(Server::getInstance()->getTickUsage());
+		$this->push(Server::getInstance()->getTickUsage());
 	}
 
 	public function getGraphMaxHeight(){
