@@ -7,13 +7,13 @@ abstract class Monitor{
 	const DEFAULT_GRAPH_ROW = 128;
 	const DEFAULT_GRAPH_COLUMN = 5;
 
-	private $graphRow = self::DEFAULT_GRAPH_ROW;
-	private $graphColumn = self::DEFAULT_GRAPH_COLUMN;
+	protected $graphRow = self::DEFAULT_GRAPH_ROW;
+	protected $graphColumn = self::DEFAULT_GRAPH_COLUMN;
 
-	private $log = [];
+	protected $log = [];
 
-	private $averageValue = 0;
-	private $maxValue = 0;
+	protected $averageValue = 0;
+	protected $maxValue = 0;
 
 	abstract public function getName();
 
