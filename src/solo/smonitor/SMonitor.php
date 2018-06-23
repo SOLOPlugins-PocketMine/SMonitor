@@ -8,8 +8,7 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerQuitEvent;
-use pocketmine\scheduler\PluginTask;
-
+use pocketmine\scheduler\Task;
 use solo\smonitor\monitor\Monitor;
 
 class SMonitor extends PluginBase implements Listener{
@@ -30,7 +29,13 @@ class SMonitor extends PluginBase implements Listener{
 
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 
-    $this->getServer()->getScheduler()->scheduleRepeatingTask(new class($this) extends PluginTask{
+    $this->getScheduler()->scheduleRepeatingTask(new class($this) extends Task{
+      private $owner;
+
+      public function __construct(SMonitor $owner){
+        $this->owner = $owner;
+      }
+
       public function onRun(int $currentTick){
         foreach($this->owner->getMonitors() as $monitor){
           $monitor->update();
